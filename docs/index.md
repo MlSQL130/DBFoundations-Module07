@@ -5,16 +5,16 @@
 *https://github.com/MlSQL130/DBFoundations-Module07.git*     
 **Functions**  
 Introduction
-Functions are named expressions that can return a single value or multiple values. They can be used multiple times and only need to be written, reducing repetitive tasks. There are two types of SQL functions, system defined/built-in functions or user defined functions(UDFs).  
+Functions are named expressions that can return a single value or multiple values. They can be used multiple times and only need to be written, reducing repetitive tasks. There are two types of SQL functions, system defined/built-in functions or user defined functions(UDFs).     
  
-Example 1. Built- in functions https://www.janbasktraining.com/blog/sql-functions/, 2019
-We will focus on user defined functions. 
+Example 1. Built- in functions https://www.janbasktraining.com/blog/sql-functions/, 2019  
+We will focus on user defined functions.     
 
-SQL User Defined Functions
-When you repeatedly find yourself writing the same query, created a complex query, or none of the built in functions work, then its’s time to consider creating a user defined function. There are two types of UDFs; scalar and table valued functions. 
+*SQL User Defined Functions*  
+When you repeatedly find yourself writing the same query, created a complex query, or none of the built in functions work, then its’s time to consider creating a user defined function. There are two types of UDFs; scalar and table valued functions.   
 
-Scalar Functions
-Scalar functions accept any number of parameters and returns a single value each time you execute it. Figure 1 provides an example of the syntax required to create a function.
+*Scalar Functions*  
+Scalar functions accept any number of parameters and returns a single value each time you execute it. Figure 1 provides an example of the syntax required to create a function.    
 
 CREATE FUNCTION fnLongDate—you name your function
 (
@@ -28,20 +28,20 @@ DATENAME(DW,@MyDate) + ' ' +
 DATENAME(D,@MyDate) + ' ' +
 DATENAME(M,@MyDate) + ' ' +
 DATENAME(YY,@MyDate)
-END
-Figure 1. User-Defined Function(https://www.wiseowl.co.uk/blog/s344/sql-  functions.htm, 2013)
+END  
+Figure 1. User-Defined Function(https://www.wiseowl.co.uk/blog/s344/sql-  functions.htm, 2013)    
 
-You refresh the database and check that the new function is in the database scalar function folder, seen Figure 2.
+You refresh the database and check that the new function is in the database scalar function folder, seen Figure 2.    
   
-Now execute the query using your new scalar function.
+Now execute the query using your new scalar function.   
 SELECT
 FilmName
 ,dbo.fnLongDate(FilmReleaseDate)
 FROM
 tblFilm
-Figure 2. Scalar-valued function folder example and function execution
-Table Value Functions 
-Table value functions(TVF) are used to return a table and more than one value. Views can return tables as well, but they don’t accept parameters. There are two types of TVFs; in-line and multi-statement.  
+Figure 2. Scalar-valued function folder example and function execution    
+*Table Value Functions*   
+Table value functions(TVF) are used to return a table and more than one value. Views can return tables as well, but they don’t accept parameters. There are two types of TVFs; in-line and multi-statement.    
 In-line functions are made up of one select statement, returns a single set of rows. The syntax for an in-line function would look like the example in Figure 3.
 	CREATE FUNCTION fnFilmsByDuration(
 @duration int –parameter name and datatype 
