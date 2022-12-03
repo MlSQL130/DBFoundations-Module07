@@ -2,7 +2,7 @@
 *November 30, 2022*  
 *FDN 130 A*  
 *Assignment 07*  
-*https://github.com/MlSQL130/DBFoundations-Module07.git*  
+*https://github.com/MlSQL130/DBFoundations-Module07.git*   
 **Functions**
 Introduction
 Functions are named expressions that can return a single value or multiple values. They can be used multiple times and only need to be written, reducing repetitive tasks. There are two types of SQL functions, system defined/built-in functions or user defined functions(UDFs).  
