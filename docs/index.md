@@ -64,7 +64,7 @@ tblFilm
 WHERE  
 FilmRunTimeMinutes >= @duration    
 
-SELECT * from dbo.fnFilmsByDuration(190)—execute  function    
+SELECT * from dbo.fnFilmsByDuration(190)—execute  function      
 
 Figure3. In-line function example (https://www.wiseowl.co.uk/blog/s347/in-line.htm, 2013)    
 
@@ -88,14 +88,14 @@ BEGIN—
 RETURN  
  END    
 	
-Figure 4. Multi-Statement Syntax (https://www.wiseowl.co.uk/blog/s347/multi-statement.htm, 2013)
+Figure 4. Multi-Statement Syntax (https://www.wiseowl.co.uk/blog/s347/multi-statement.htm, 2013)  
 
-Scalar, Inline, Multi-Statement Functions
-The differences between these types of user-defined functions are the following
-Scalar Function	In-Line Function	Multi-Statement Functions
-Returns single value	Returns a table object 	Returns a table variable
+*Scalar, Inline, Multi-Statement Functions*  
+The differences between these types of user-defined functions are the following  
+Scalar Function	                In-Line Function		Multi-Statement Functions
+Returns single value		Returns a table object 		Returns a table variable
 Syntax has Begin and End	No Begin and End required	Begin and End in syntax
-No Select Statement	Single Select Statement	Multiple Select Statements
+No Select Statement		Single Select Statement		Multiple Select Statements
 Don’t define table variables	Don’t define table variables	Need to define table variables
 
 Summary
